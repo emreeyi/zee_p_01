@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_ee_i_api_test unique;
+strict ( 2 );
+
+define behavior for zee_i_api_test alias user
+//persistent table zee_t_02
+lock master
+authorization master ( instance )
+etag master title
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) UserId, Id;
+}

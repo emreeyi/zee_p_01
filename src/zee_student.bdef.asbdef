@@ -1,0 +1,32 @@
+managed implementation in class zbp_ee_student unique;
+strict ( 2 );
+
+define behavior for zee_student alias Student
+persistent table zee_t_01
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( numbering : managed, readonly ) Id;
+
+  mapping for zee_t_01
+
+  {
+
+      Id                 = id;
+      Firstname          = firstname;
+      Lastname           = lastname;
+      Age                = age;
+      Course             = course;
+      Courseduration     = courseduration;
+      Status             = status;
+      Gender             = gender;
+      Dob                = dob;
+      Lastchangedat      = lastchangedat;
+      Locallastchangedat = locallastchangedat;
+
+  }
+}

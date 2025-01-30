@@ -1,0 +1,4 @@
+@EndUserText.label: 'Serv Definition for 003'
+define service Zee_c_003 {
+  expose zee_c_003 as Material;
+}

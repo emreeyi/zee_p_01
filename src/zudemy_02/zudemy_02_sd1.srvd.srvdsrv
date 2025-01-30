@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service definition'
+define service ZUDEMY_02_SD1 {
+  expose zudemy_02_c_catsales;
+}

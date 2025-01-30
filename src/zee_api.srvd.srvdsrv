@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for API TEST'
+define service Zee_api {
+  expose zee_c_api_test;
+}

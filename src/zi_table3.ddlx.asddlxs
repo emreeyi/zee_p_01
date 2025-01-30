@@ -1,0 +1,69 @@
+@Metadata.layer: #CUSTOMER
+@UI: {
+  headerInfo: {
+    typeName: 'Table3', 
+    typeNamePlural: 'Table3s', 
+    title: {
+      type: #STANDARD, 
+      label: 'table3', 
+      value: 'Matnr'
+    }
+  }
+}
+annotate view ZI_Table3 with
+{
+  @UI.identification: [ {
+    position: 1 , 
+    label: 'Matnr'
+  } ]
+  @UI.lineItem: [ {
+    position: 1 , 
+    label: 'Matnr'
+  } ]
+  @UI.facet: [ {
+    id: 'ZI_Table3', 
+    purpose: #STANDARD, 
+    type: #IDENTIFICATION_REFERENCE, 
+    label: 'table3', 
+    position: 1 
+  } ]
+  Matnr;
+  
+  @UI.identification: [ {
+    position: 2 , 
+    label: 'Name'
+  } ]
+  @UI.lineItem: [ {
+    position: 2 , 
+    label: 'Name'
+  } ]
+  Name;
+  
+  @UI.identification: [ {
+    position: 3 , 
+    label: 'Surname'
+  } ]
+  @UI.lineItem: [ {
+    position: 3 , 
+    label: 'Surname'
+  } ]
+  Surname;
+  
+  @UI.identification: [ {
+    position: 4 , 
+    label: 'Menge'
+  } ]
+  @UI.lineItem: [ {
+    position: 4 , 
+    label: 'Menge'
+  } ]
+  Menge;
+  
+  @Consumption.valueHelpDefinition: [ {
+    entity: {
+      name: 'I_UnitOfMeasure', 
+      element: 'UnitOfMeasure'
+    }
+  } ]
+  Meins;
+}

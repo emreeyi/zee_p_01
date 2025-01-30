@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition for Student'
+define service Zexpose_stud {
+  expose zee_c_student;
+}

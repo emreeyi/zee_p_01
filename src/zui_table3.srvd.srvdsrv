@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZI_Table3_S'
+define service ZUI_TABLE3 {
+  expose ZI_TABLE3_S as Table3All;
+  expose ZI_TABLE3 as Table3;
+}

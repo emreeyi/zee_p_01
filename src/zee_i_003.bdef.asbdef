@@ -1,0 +1,14 @@
+unmanaged implementation in class zbp_ee_i_003 unique;
+//strict ( 2 );
+
+define behavior for zee_i_003 alias material
+//persistent table zee_t_03
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) Matnr;
+}
