@@ -1,0 +1,17 @@
+unmanaged implementation in class zbp_udemy02_c_u_travel unique;
+//strict ( 2 ); //Uncomment this line in order to enable strict mode 2. The strict mode has two variants (strict(1), strict(2)) and is prerequisite to be future proof regarding syntax and to be able to release your BO.
+
+define behavior for ZUDEMY02_C_U_TRAVEL //alias <alias_name>
+//late numbering
+lock master
+authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly ) TravelId;
+  field ( mandatory ) AgencyId, CustomerId;
+  action set_booked result[1] $self;
+
+}

@@ -18,7 +18,9 @@ ENDCLASS.
 
 
 
-CLASS zcl_udemy02_sqlscript IMPLEMENTATION.
+CLASS ZCL_UDEMY02_SQLSCRIPT IMPLEMENTATION.
+
+
   METHOD getorders BY DATABASE FUNCTION FOR HDB
              LANGUAGE SQLSCRIPT OPTIONS READ-ONLY USING
              zudemy02_so zudemy02_so_i zudemy02_product.
@@ -36,6 +38,7 @@ CLASS zcl_udemy02_sqlscript IMPLEMENTATION.
 
   ENDMETHOD.
 
+
   METHOD getproddata BY DATABASE PROCEDURE FOR HDB
              LANGUAGE SQLSCRIPT OPTIONS READ-ONLY USING zudemy02_product.
     DECLARE lv_price, lv_discount DOUBLE;
@@ -45,5 +48,4 @@ CLASS zcl_udemy02_sqlscript IMPLEMENTATION.
     ev_price_dis = ( lv_price * ( 100 - lv_discount ) / 100 );
 
   ENDMETHOD.
-
 ENDCLASS.

@@ -1,0 +1,5 @@
+@ObjectModel.leadingEntity.name: 'ZEE_005_IS_01'
+define service ZEE_005_UI_01 {
+  expose ZEE_005_IS_01 as VeritabanTablosuAll;
+  expose ZEE_005_I_01 as VeritabanTablosu;
+}

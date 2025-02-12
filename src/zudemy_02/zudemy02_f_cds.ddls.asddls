@@ -8,5 +8,6 @@ returns {
   gross_amount: abap.int4;
   gross_dis_amount: abap.int4;
   
+  
 }
 implemented by method zcl_udemy02_sqlscript=>getorders;

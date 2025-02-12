@@ -1,0 +1,65 @@
+managed implementation in class ZEE_005_CLI_01 unique;
+strict;
+with draft;
+define behavior for ZEE_005_IS_01 alias VeritabanTablosuAll
+draft table ZEE_DS_005
+with unmanaged save
+lock master total etag LastChangedAtMax
+authorization master( global )
+
+{
+  field ( readonly )
+   SingletonID;
+
+  field ( notrigger )
+   SingletonID,
+   LastChangedAtMax;
+
+
+  update;
+  internal create;
+  internal delete;
+
+  draft action ( features : instance ) Edit;
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+  association _VeritabanTablosu { create ( features : instance ); with draft; }
+}
+
+define behavior for ZEE_005_I_01 alias VeritabanTablosu ##UNMAPPED_FIELD
+persistent table ZEE_A_005
+draft table ZEE_D_005
+lock dependent by _VeritabanTablosuAll
+authorization dependent by _VeritabanTablosuAll
+
+{
+  field ( mandatory : create )
+   Id;
+
+  field ( readonly )
+   SingletonID;
+
+  field ( readonly : update )
+   Id;
+
+  field ( notrigger )
+   SingletonID;
+
+
+  update( features : global );
+  delete( features : global );
+
+  factory action ( features : instance ) CopyVeritabanTablosu parameter ZEE_005_I_01_copy [1];
+
+  mapping for ZEE_A_005
+  {
+    Id = ID;
+    Name = NAME;
+    Surname = SURNAME;
+  }
+
+  association _VeritabanTablosuAll { with draft; }
+}

@@ -1,36 +1,33 @@
 {
   "formatVersion": "1",
   "header": {
-    "description": "Maintain table3",
+    "description": "Maintain Veritabanı Tablosu",
     "originalLanguage": "en",
     "abapLanguageVersion": "cloudDevelopment"
   },
   "serviceConfiguration": {
-    "serviceBinding": "ZUI_TABLE3_O4",
-    "serviceName": "ZUI_TABLE3_O4",
+    "serviceBinding": "ZEE_005_UI_01_O4",
+    "serviceName": "ZEE_005_UI_01_O4",
     "serviceVersion": "0001",
-    "rootEntitySet": "Table3All",
-    "name": "table3",
+    "rootEntitySet": "VeritabanTablosuAll",
+    "name": "Veritabanı Tablosu",
     "configurationGroup": "",
     "skipRootEntity": true
   },
   "appConfiguration": {
-    "listReport": {
-      "initialLoad": "disabled",
-      "variantManagement": "none"
-    },
+    "listReport": {},
     "objectPages": [
       {
-        "entitySet": "Table3All",
-        "variantManagement": "control",
-        "showTransportSelectionStrip": true
+        "entitySet": "VeritabanTablosuAll",
+        "variantManagement": "control"
       }
     ],
     "tableSettings": [
       {
-        "entitySet": "Table3",
+        "entitySet": "VeritabanTablosu",
         "tableType": "gridTable",
-        "selectionMode": "auto",
+        "selectionMode": "single",
+        "selectAll": true,
         "rowCountMode": "auto",
         "frozenColumnCount": 1,
         "creationModeName": "inlineCreationRows",

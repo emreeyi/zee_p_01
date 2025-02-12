@@ -1,0 +1,8 @@
+@EndUserText.label: 'Travel Service Definition for Unmanaged Scenario'
+define service ZUDEMY02_SD_U_TRAVEL {
+  expose ZUDEMY02_I_U_CUSTOMER as travelCustomer;
+  expose ZUDEMY02_I_U_AGENCY   as travelAgency;
+  expose ZUDEMY02_C_U_TRAVEL   as Travel;
+  expose I_Currency;
+  expose I_Country;
+}
